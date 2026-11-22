@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #E5E1DD;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 5%;
+    background-color: #083A4F;
+    color: #E5E1DD;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 4px;
+}
+
+/* Outside the media query (keep hidden on desktop) */
+#menuBtn {
+    display: none;
+    background-color: transparent;
+    color: #E5E1DD;
+    border: 1.5px solid #A58D66;
+    padding: 8px 16px;
+    margin: 0;
+    font-family: inherit;
+}
+
+#menuBtn:hover {
+    color: #083A4F;
+    opacity: 1;
+}
+
+
+main {
+    flex: 1;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    text-align: left;
+    padding: clamp(40px, 8vw, 80px) 5%;
+    background-color: #E5E1DD;
+    color: #A58D66;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-card {
+    flex: 0 1 440px;
+    margin-left: auto;
+    background-color: #083A4F;
+    color: #E5E1DD;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(8, 58, 79, 0.15);
+}
+
+
+.hero-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid #233040;
+}
+
+.hero h2 {
+    font-size: clamp(1.7rem, 5vw, 2.5rem);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin: 0 0 25px 0;
+    max-width: 600px;
+    text-align: left;
+}
+
+.alignment {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Hero Right Card */
+
+.hero-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    color: #A58D66;
+}
+
+.hero-card p {
+    margin: 0 0 16px 0;
+    max-width: 100%;
+    line-height: 1.6;
+}
+
+.hero-card button {
+    background-color: #A58D66;
+    color: #083A4F;
+    font-weight: bold;
+    margin: 0;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #233040;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* About & Skills Sections */
+.about-section {
+    padding: 40px 5% 10px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 25px auto;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-info {
+    flex: 1;
+    min-width: 260px;
+    text-align: left;
+}
+
+#skills {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #083A4F;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #083A4F;
+    color: white;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #181818;
+    color: white;
+}
+
+.dark-mode .hero {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.dark-mode .hero-card {
+    background-color: #233040;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #233040;
+    color: white;
+}
+
+.heading1 {
+    font-size: clamp(2.8rem, 13vw, 6rem);
+    line-height: 1.1;
+}
+
+.projects-section {
+    padding: 40px 5%;
+    background-color: #E5E1DD;
+    color: #083A4F;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.email-card {
+    display: flex;
+    align-items: center; /* Vertically centers the image with the text */
+    gap: 15px;           /* Space between the logo and the email text */
+    text-align: left;    /* Aligns the heading and link nicely to the left */
+}
+
+
+.contact-section {
+    align-items: center;
+    padding: 40px 5%;
+    background-color: #E5E1DD;
+    color: #083A4F;
+}
+
+.contact-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    #menuBtn {
+        display: inline-block;
+        background-color: transparent;
+        color: #E5E1DD;
+        border: 1.5px solid #A58D66;
+        padding: 8px 16px;
+        margin: 0;
+        font-family: inherit;
+    }
+
+    #menuBtn:hover {
+        background-color: #A58D66;
+        color: #083A4F;
+        opacity: 1;
+    }
+
+    #navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navigation.show {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 32px 5%;
+    }
+
+    .hero-left {
+        flex: none;
+    }
+
+    .hero-card {
+        flex: none;
+        margin-left: 0;
+        padding: 24px;
+    }
+
+    #skills {
+        padding: 30px 5%;
+    }
+}
